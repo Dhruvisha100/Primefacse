@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <style type="text/css">
+    .grid-radio td {
+        padding: .5rem;
+    }
+</style>
+    <h:body>
+        <h:form>
+            Selected one Redio
+              <p:selectOneRadio  id="console" value="#{radioView.console}" >
+            <f:selectItem itemLabel="Option1" itemValue="Option1"/>
+            <f:selectItem itemLabel="Option2" itemValue="Option2"/>
+            <f:selectItem itemLabel="Option3" itemValue="Option3"/>
+        </p:selectOneRadio>
+            
+            Grid<p:selectOneRadio id="city" value="#{radioView.city}" layout="grid" columns="3" styleClass="grid-radio">
+            <f:selectItems value="#{radioView.cities}" var="city" itemLabel="#{city}" itemValue="#{city}"/>
+        </p:selectOneRadio>
+            
+            Custom Layout <p:selectOneRadio id="customRadio" value="#{radioView.color}" layout="custom">
+                <f:selectItem itemLabel="Red" itemValue="Red"/>
+                <f:selectItem itemLabel="Green" itemValue="Green"/>
+                <f:selectItem itemLabel="Blue" itemValue="Blue"/>
+            </p:selectOneRadio>
+            
+            <h:panelGrid columns="3" cellpadding="5">
+                <p:radioButton id="opt1" for="customRadio" itemIndex="0"/>
+                <h:outputLabel for="opt1" value="Red"/>
+                <p:spinner/>
+
+                <p:radioButton id="opt2" for="customRadio" itemIndex="1"/>
+                <h:outputLabel for="opt2" value="Green"/>
+                <p:inputText/>
+
+                <p:radioButton id="opt3" for="customRadio" itemIndex="2"/>
+                <h:outputLabel for="opt3" value="Blue"/>
+                <p:calendar/>
+            </h:panelGrid>
+        </h:form>
+       
+    </h:body>
+</html>
+

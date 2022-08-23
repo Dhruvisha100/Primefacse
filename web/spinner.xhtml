@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <div class="ui-fluid p-formgrid p-grid">
+            <div class="p-field p-col-12 p-md-4">
+                <p:outputLabel for="@next" value="Spinner"/>
+                <p:spinner id="basic" value="#{spinnerView.number1}"/>
+            </div>
+            <br/>
+            <div class="p-field p-col-12 p-md-4">
+                <p:outputLabel for="@next" value="Step Factor"/>
+                <p:spinner id="step" value="#{spinnerView.number2}" stepFactor="0.25"/>
+            </div>
+            <br/>
+            <div class="p-field p-col-12 p-md-4">
+                <p:outputLabel for="@next" value="Rounded"/>
+                <p:spinner id="rounded" value="#{spinnerView.number7}" min="0" max="100" stepFactor="5" />
+            </div>
+            <br/>
+             <div class="p-field p-col-12 p-md-4">
+                <p:outputLabel for="@next" value="Prefix"/>
+                <p:spinner id="prefix" value="#{spinnerView.number4}" prefix="$" min="0"/>
+            </div>
+            <br></br>
+          
+        </div>
+        <br/>
+         
+    </h:body>
+</html>
+

@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+       <h:form>
+        <p:growl id="messages" showDetail="true"/>
+
+        <p:toolbar>
+            <p:toolbarGroup>
+                <p:commandButton type="button" value="New" styleClass="p-mr-2" />
+                <p:commandButton type="button" value="Open"  styleClass="ui-button-success" />
+
+                
+                    </p:toolbarGroup>
+
+            <p:toolbarGroup align="right">
+                <p:menuButton value="Options">
+                    <p:menuitem value="Save" action="#{toolbarView.save}" update="messages" />
+                    <p:menuitem value="Update" action="#{toolbarView.update}" update="messages"/>
+                    <p:menuitem value="Delete" action="#{toolbarView.delete}" ajax="false" />
+                    <p:menuitem value="Homepage" url="http://www.primefaces.org" />
+                </p:menuButton>
+            </p:toolbarGroup>
+        </p:toolbar>
+    </h:form>
+    </h:body>
+</html>
+
